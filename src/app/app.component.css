@@ -1,0 +1,12 @@
+
+.card-row{
+  margin:20px auto;
+}
+.bg{
+  background-color:rgba(245,245,245,255)
+}
+.btn_{
+  padding:5px 20px;
+  border-radius:5px;
+  margin:10px;
+}
