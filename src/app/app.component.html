@@ -4,20 +4,13 @@
 <!--Main-Slider-->
   <app-mainslider></app-mainslider>
 <!--Products-->
-  <div class="card-row container-fluid  row">
-    <app-product-card class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"></app-product-card>
-    <app-product-card class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"></app-product-card>
-    <app-product-card class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"></app-product-card>
-    <app-product-card class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"></app-product-card>
+  <div class="row">
+    <app-product-card
+      *ngFor="let product of product;"
+      [product]="product"
+      class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"
+    ></app-product-card>
   </div>
-
-<!--  <div class="row">-->
-<!--    <app-product-card-->
-<!--      *ngFor="let product of products;"-->
-<!--      [product]="product"-->
-<!--      class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"-->
-<!--    ></app-product-card>-->
-<!--  </div>-->
   <app-footer></app-footer>
     <router-outlet />
 </div>
