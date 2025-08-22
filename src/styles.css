@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+.bg {
+  background-color: #000000 !important; /* ASUS ROG dark background */
+  color: #ffcccc;            /* Light text for readability */
+  margin: 0;
+  font-family: 'Share Tech Mono', monospace;
+}

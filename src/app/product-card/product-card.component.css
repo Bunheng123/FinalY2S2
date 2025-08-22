@@ -1,24 +1,88 @@
+/* Card container with neon red border */
 .card {
-  border-radius: 10px;
-  margin-top:30px
+  background-color: #120000;
+  border-radius: 12px;
+  margin-top: 30px;
+  color: #e6bcbc;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid #ff1a1a !important; /* Strong red border */
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.5) !important; /* Glow effect */
 }
 
-.price {
-  color: red;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(255, 26, 26, 0.8); /* Stronger glow on hover */
+}
+
+/* NEW label */
+.card .bg-danger {
+  background-color: #ff3333 !important;
+  box-shadow: 0 0 6px #ff333388;
   font-weight: bold;
+  text-transform: uppercase;
 }
 
+/* Product Image */
+.card img {
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 5px rgba(255, 77, 77, 0.5));
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.05);
+}
+
+/* Title styling */
 .title {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-shadow: 0 0 3px rgba(255, 77, 77, 0.7);
+  font-size: 1.05rem;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* Description styling */
 .description {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #d98c8c;
+  font-size: 0.9rem;
+}
+
+/* Price styling */
+.price {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-shadow: 0 0 4px rgba(255, 77, 77, 0.8);
+}
+
+/* Category text */
+.card .small.text-muted {
+  color: #a64d4d !important;
+  font-size: 0.85rem;
+}
+
+/* Add to Cart button */
+.btn-outline-success {
+  border-color: #ff3333;
+  color: #ff3333;
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(255, 77, 77, 0.4);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: #ff3333;
+  color: #000;
+  box-shadow: 0 0 12px #ff3333;
 }

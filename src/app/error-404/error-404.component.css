@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.error-container {
+  max-width: 500px;
+}
+.error-code {
+  font-size: 96px;
+  font-weight: bold;
+  color: #dc3545;
+}
+.error-message {
+  font-size: 24px;
+  color: #6c757d;
+}
+.btn-home {
+  margin-top: 20px;
+}

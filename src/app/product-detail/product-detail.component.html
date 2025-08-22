@@ -1,0 +1,40 @@
+<!-- Loading -->
+<div *ngIf="loading">
+  <p>Loading product...</p>
+</div>
+
+<!-- Error / Product Not Found -->
+<div *ngIf="errorMessage && !loading" class="product-not-found">
+  <h2>{{ errorMessage }}</h2>
+  <img [src]="product?.imageUrl && product.imageUrl !== ''
+            ? product.imageUrl
+            : 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg'"
+       [alt]="product?.name || 'No image available'">
+
+  <input type="button"
+         class="btn btn-outline-success col-12 mt-2"
+         [disabled]="!product"
+         value="Add to cart"
+         (click)="onAddToCart(product)">
+</div>
+
+<!-- Product Detail -->
+<div class="product-detail" *ngIf="product && !loading">
+  <div class="product-image">
+    <img [src]="product.imageUrl || 'https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg'"
+         [alt]="product?.name || 'No image available'">
+  </div>
+  <div class="product-info">
+    <h2 class="product-title">{{ product?.name || 'Unknown Product' }}</h2>
+    <p class="product-category">{{ product?.category || 'No category' }}</p>
+    <p class="product-price">{{ product?.price | currency:'USD' }}</p>
+    <p class="product-description">
+      {{ product?.description || 'No description available.' }}
+    </p>
+
+    <input type="button"
+           class="btn btn-outline-success col-12"
+           value="Add to cart"
+           (click)="onAddToCart(product)">
+  </div>
+</div>

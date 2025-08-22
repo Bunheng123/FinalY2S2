@@ -10,3 +10,122 @@
   border-radius:5px;
   margin:10px;
 }
+
+/*Top_menu*/
+.navbar-brand {
+  font-weight: bold;
+}
+nav {
+  background: linear-gradient(to right, #0d0d0d, #1a0000);
+  border-bottom: 2px solid #ff1a1a;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.4); /* fiery glow effect */
+}
+
+
+nav img {
+  height: 30px;
+  filter: drop-shadow(0 0 1px #ff1a1a) drop-shadow(0 0 3px #ff0000);
+}
+
+
+.nav-link {
+  color: #ff4d4d !important;
+  text-shadow: 0 0 5px #ff1a1a;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ff6600 !important;
+  text-shadow: 0 0 8px #ff3300;
+}
+
+.btn-outline-success {
+  border-color: #ff1a1a;
+  color: #ff1a1a;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff1a1a55;
+}
+
+.btn-outline-success:hover {
+  background-color: #ff1a1a;
+  color: #000;
+  box-shadow: 0 0 15px #ff1a1a;
+}
+
+/* Search bar style */
+.form-control {
+  background-color: #1a0000;
+  color: #ffcccc;
+  border: 1px solid #ff1a1a;
+}
+
+.form-control::placeholder {
+  color: #ff6666;
+}
+nav, .nav-link, .btn {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/*footer*/
+footer {
+  background-color: #0d0d0d;
+  color: #ffcccc;
+  font-family: 'Share Tech Mono', monospace;
+  border-top: 2px solid #ff1a1a;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.1) inset;
+}
+
+/* Section Titles */
+footer h6 {
+  color: #ff1a1a;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 4px #ff1a1a;
+}
+
+/* Links */
+footer a {
+  color: #ff9999;
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+footer a:hover {
+  color: #ff1a1a;
+  text-shadow: 0 0 6px #ff1a1a;
+}
+
+/* Icons */
+footer i {
+  color: #ff4d4d;
+  margin-right: 8px;
+}
+
+/* Social icons */
+footer .fab {
+  font-size: 1.2rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+footer .fab:hover {
+  transform: scale(1.2);
+  color: #ff1a1a;
+}
+
+/* Brand description */
+footer p {
+  color: #ff9999;
+}
+
+/* Bottom text */
+footer .text-muted {
+  color: #cc6666 !important;
+}
+
+/* Border top */
+footer .border-top {
+  border-top: 1px solid #ff1a1a !important;
+}

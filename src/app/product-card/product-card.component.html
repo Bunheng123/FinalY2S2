@@ -1,28 +1,43 @@
-<div class="card w-100 shadow mb-4 p-3 border-0">
+<div class="card w-100 shadow mb-4 p-3 border-0 position-relative">
   <!-- NEW label -->
-  <div class="position-absolute bg-danger text-white small px-2 py-1 rounded" style="top: 10px; left: 10px;">NEW</div>
+  <div class="position-absolute bg-danger text-white small px-2 py-1 rounded position-absolute" style="top: 10px; left: 10px; z-index: 10;">
+    Stock: {{ product.qty }}
+  </div>
 
-  <!-- Product image -->
-  <div class="text-center">
-    <img [src]="product.image"
+
+
+  <!-- Name (left) + Product image (center) -->
+
+  <div
+    style="cursor:pointer"
+    [routerLink]="['/product-detail']"
+    [queryParams]="{product_id: product.id}">
+    <div class="text-center">
+    <img [src]="product.imageUrl"
          class="img-fluid"
+         onerror="this.src='/slider/No_image.jpg';"
          style="max-height: 150px; object-fit: contain;"
-         alt="{{ product.title }}">
+         alt="{{ product.name }}">
+  </div>
+    <h6 class="title font-weight-semibold mt-3 text-start px-2">{{ product.name }}</h6>
   </div>
 
   <!-- Card body -->
-  <div class="card-body px-2 py-3">
-    <h6 class="title font-weight-semibold">{{ product.title }}</h6>
-    <div class="small text-muted mb-2">
+  <div class="card-body px-2 pb-3 pt-1">
+    <div class="small text-muted mb-1">
       <div class="description">{{ product.description }}</div>
     </div>
-    <div class="price mb-3">
-      {{ product.price | currency }}/{{product.price | toKhr:"in"}}
+    <div class="price mb-1">
+      {{ product.price | currency }} / {{ product.price | toKhr:"in" }}
     </div>
-
     <!-- Category & description -->
     <div class="small text-muted mb-2">
-      <div class="mb-1"><strong>Category:</strong> {{ product.category }}</div>
+      <div class="mb-2"><strong>Category:</strong> {{ product.category }}</div>
     </div>
+    <input type="button"
+           class="btn btn-outline-success col-12"
+           value="Add to cart"
+
+           (click)="onAddToCart(product)">
+
   </div>
-</div>

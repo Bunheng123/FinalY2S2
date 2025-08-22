@@ -1,18 +1,107 @@
 <div class="container-fluid bg">
+
 <!--  Top Menu-->
-<app-top-menu></app-top-menu>
-<!--Main-Slider-->
-  <app-mainslider></app-mainslider>
-<!--Products-->
-  <div class="row">
-    <app-product-card
-      *ngFor="let product of product;"
-      [product]="product"
-      class="col-lg-3 col-md-3 col-sm-6 mb-4 d-flex"
-    ></app-product-card>
-  </div>
-  <app-footer></app-footer>
-    <router-outlet />
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <a class="navbar-brand" routerLink="/"><img src="https://i.namu.wiki/i/hz_gt7QJKl4izvv381tVPL2yyWNpaU4g-HiCcmQ-AuVYRMrxHmW-qrD6bWiXBpsrt4NPYHcaQeLQlU0Z884HgA.svg" alt="LOGO"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav mr-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+        <li class="nav-item active">
+          <a class="nav-link text-white" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" routerLink="/product">Product</a>
+        </li>
+
+      </ul>
+
+      <input class="form-control mr-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success" routerLink="/cart">Cart({{ cartService.getItem().length }})</button>
+
+    </div>
+
+  </nav>
+
+
+
+  <router-outlet />
+
+<!--  footer-->
+  <footer class=" text-light pt-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- ASIDE SECTION: Brand Info -->
+        <aside class="col-md-4 mb-4">
+          <img src="https://press.asus.com/assets/w_640,h_640/4a83deef-f73a-44e9-a9d6-1ae062de6fb9/ROG%20logo_red.png" alt="ROG Logo" style="width: 130px;">
+
+        </aside>
+
+        <!-- MAIN FOOTER CONTENT -->
+        <div class="col-md-8">
+          <div class="row">
+
+            <!-- Products -->
+            <div class="col-md-4 mb-4">
+              <h6 class="text-danger font-weight-bold">Products</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light">Gaming Laptops</a></li>
+                <li><a href="#" class="text-light">Graphics Cards</a></li>
+                <li><a href="#" class="text-light">Motherboards</a></li>
+                <li><a href="#" class="text-light">Monitors</a></li>
+                <li><a href="#" class="text-light">Keyboards & Mice</a></li>
+              </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="col-md-4 mb-4">
+              <h6 class="text-danger font-weight-bold">Support</h6>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-light">Driver & Tools</a></li>
+                <li><a href="#" class="text-light">Warranty</a></li>
+                <li><a href="#" class="text-light">ROG Forum</a></li>
+                <li><a href="#" class="text-light">Technical Support</a></li>
+                <li><a href="#" class="text-light">Downloads</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-md-4 mb-4">
+              <h6 class="text-danger font-weight-bold">Contact</h6>
+              <ul class="list-unstyled">
+                <li><i class="fas fa-envelope"></i> rog_support:asus.com</li>
+                <li><i class="fas fa-phone"></i> +885 17 255 700</li>
+                <li><i class="fas fa-map-marker-alt"></i> Cambodia, Phnom Penh</li>
+                <li><i class="fas fa-user"></i> Lim Bunheng,SV2 </li>
+                <li class="mt-3">
+                  <a href="#" class="text-light mr-2"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#" class="text-light mr-2"><i class="fab fa-youtube"></i></a>
+                  <a href="#" class="text-light mr-2"><i class="fab fa-instagram"></i></a>
+                  <a href="#" class="text-light mr-2"><i class="fab fa-discord"></i></a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <p class="mt-3 font-weight-light text-justify">
+          <strong>Republic of Gamers (ROG)</strong> is a brand created by ASUS dedicated to delivering the most innovative hardcore gaming hardware for true gaming enthusiasts worldwide. Built for performance, designed with style.
+        </p>
+        <p class="text-muted small">
+          Empowering every gamer to push beyond limits — Join the ROG community and stay ahead in every match.
+        </p>
+      </div>
+
+      <!-- Bottom copyright -->
+      <div class="text-center text-muted mt-4 pt-3 border-top border-danger">
+        &copy; 2025 Republic of Gamers. All rights reserved. Designed by ASUS.
+      </div>
+    </div>
+  </footer>
+
+
 </div>
 
 
