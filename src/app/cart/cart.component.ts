@@ -4,12 +4,13 @@ import { CurrencyPipe, DecimalPipe, JsonPipe } from '@angular/common';
 import { NgForOf } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ToKhrPipe } from '../to-khr.pipe';
+import {RouterLink} from '@angular/router';
 declare const Swal:any;
 
 @Component({
   selector: 'app-cart',
   imports: [
-    JsonPipe, NgForOf, FormsModule, CurrencyPipe, ToKhrPipe, DecimalPipe
+    JsonPipe, NgForOf, FormsModule, CurrencyPipe, ToKhrPipe, DecimalPipe, RouterLink
   ],
   templateUrl: './cart.component.html',
   standalone: true,
@@ -42,13 +43,13 @@ export class CartComponent {
       }
     });
   }
-decreaseQty(item: any) {
+  decreaseQty(item: any) {
     if(item.qty>1){
       this.cartService.descrementQty(item);
     }
-}
-increaseQty(item: any) {
+  }
+  increaseQty(item: any) {
     this.cartService.incrementQty(item);
-}
+  }
 
 }

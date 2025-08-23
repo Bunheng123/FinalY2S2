@@ -27,7 +27,7 @@
   <div class="product-info">
     <h2 class="product-title">{{ product?.name || 'Unknown Product' }}</h2>
     <p class="product-category">{{ product?.category || 'No category' }}</p>
-    <p class="product-price">{{ product?.price | currency:'USD' }}</p>
+    <p class="product-price">{{ product?.price | currency:'USD' }} / {{product?.price | toKhr}}</p>
     <p class="product-description">
       {{ product?.description || 'No description available.' }}
     </p>

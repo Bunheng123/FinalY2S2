@@ -4,6 +4,7 @@ import {ProductComponent} from './product/product.component';
 import {CartComponent} from './cart/cart.component';
 import {Error404Component} from './error-404/error-404.component';
 import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {CheckOutComponent} from './check-out/check-out.component';
 
 export const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -11,5 +12,6 @@ export const routes: Routes = [
   {path: 'product', component: ProductComponent},
   {path: 'cart', component: CartComponent},
   {path: 'product-detail', component: ProductDetailComponent},
+  {path: 'check-out',component: CheckOutComponent},
   {path: '**', component: Error404Component},
 ];

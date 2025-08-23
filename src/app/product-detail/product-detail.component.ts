@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CurrencyPipe, JsonPipe, NgIf } from '@angular/common';
 import { CartServiceService } from '../service/cart-service.service';
+import {ToKhrPipe} from '../to-khr.pipe';
 declare const axios: any;
 declare const $: any;
 declare const Swal: any;
@@ -10,7 +11,7 @@ declare const Swal: any;
   selector: 'app-product-detail',
   standalone: true,
   templateUrl: './product-detail.component.html',
-  imports: [JsonPipe, CurrencyPipe, NgIf],
+  imports: [JsonPipe, CurrencyPipe, NgIf, ToKhrPipe],
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent {
